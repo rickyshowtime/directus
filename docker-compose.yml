@@ -1,21 +1,5 @@
 version: "3.3"
 services:
-  database:
-    image: elestio/postgres:15
-    restart: always
-    volumes:
-      - ./data:/var/lib/postgresql/data
-    networks:
-      - directus
-    environment:
-      POSTGRES_USER: "directus"
-      POSTGRES_PASSWORD: ${SOFTWARE_PASSWORD}
-      POSTGRES_DB: "directus"
-  cache:
-    image: redis:6
-    restart: always
-    networks:
-      - directus
   directus:
     restart: always
     image: elestio/directus:${SOFTWARE_VERSION_TAG}
