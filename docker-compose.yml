@@ -9,11 +9,6 @@ services:
     volumes:
       - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
-    networks:
-      - directus
-    depends_on:
-      - cache
-      - database
     environment:
       KEY: ${SOFTWARE_PASSWORD}
       SECRET: ${SOFTWARE_PASSWORD}
@@ -53,5 +48,3 @@ services:
       # EMAIL_SMTP_SECURE: ${EMAIL_SMTP_SECURE}
       # EMAIL_SMTP_IGNORE_TLS: ${EMAIL_SMTP_IGNORE_TLS}
       WEBSOCKETS_ENABLED: ${WEBSOCKETS_ENABLED}
-networks:
-  directus:
