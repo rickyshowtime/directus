@@ -92,7 +92,7 @@ environments:
   #  value: ""
   - key: "WEBSOCKETS_ENABLED"
     value: "true"
-  - key: "CONTENT_SECURITY_POLICY_DIRECTIVES_FRAME_SRC"
+  - key: "CONTENT_SECURITY_POLICY_DIRECTIVES__FRAME_SRC"
     value: "www.kooko.ch kooko.ch minio.kooko.ch supabase.kooko.ch"
   - key: "LOG_LEVEL"
     value: "info"
